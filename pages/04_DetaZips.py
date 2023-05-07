@@ -4,11 +4,7 @@ from deta import Deta
 import json
 
 # Connect to Deta Base with your Data Key
-deta_key = "b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC"
-zips_key = "b0fhjqxu_T35JeurA5CdztSiUEzBkxoaCvczQzurmgJ"
-
-deta = Deta(zips_key)
-
+deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
 db = deta.Base("Zipcode")
 
 hdr = st.container()
