@@ -3,7 +3,10 @@ import streamlit.components.v1 as components
 import os, json, time
 from deta import Deta, Drive
 
-project = Deta(st.secrets["data_key"])
+deta_key = "b0fvbhznajp_skZPFvqP1e1dV6eK5BHkuDm72uM6FKf4"
+zips_key = "b0fvbhznajp_xGQ4ave87rKLwaYZ5QcCkCovWFoM5thU"
+
+project = Deta(deta_key)
 drive_name = 'PicCollection'
 drive = project.Drive(drive_name)
 
