@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 from deta import Deta
-import json
+
+st.markdown("<h1 style='text-align: center; color: grey;'>Zipcode Lookup by County</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</h2>", unsafe_allow_html=True)
 
 # Connect to Deta Base with your Data Key
 deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
@@ -11,6 +13,7 @@ hdr = st.container()
 qryString = {}
 county = st.text_input("Enter partial county name and press enter.")
 if county:
+  with st.spinner("Searching..."):    
     qryString["county?contains"] = county.title()
     db_content = db.fetch(qryString).items
     try:
