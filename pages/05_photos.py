@@ -6,6 +6,9 @@ from deta import Deta, Drive
 deta_key = "b0fvbhznajp_skZPFvqP1e1dV6eK5BHkuDm72uM6FKf4"
 zips_key = "b0fvbhznajp_xGQ4ave87rKLwaYZ5QcCkCovWFoM5thU"
 
+st.markdown("<h1 style='text-align: center; color: grey;'>Zipcode Lookup by County</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</h2>", unsafe_allow_html=True)
+
 project = Deta(deta_key)
 drive_name = 'PicCollection'
 drive = project.Drive(drive_name)
@@ -29,12 +32,13 @@ uploaded_file = st.file_uploader("Choose a file")
 
 # If user attempts to upload a file.
 if uploaded_file is not None:
-    bytes_data = uploaded_file.getvalue()
+    with st.spinner(text="Loading image"):
+        bytes_data = uploaded_file.getvalue()
 
-    # Show the image filename and image.
+# Show the image filename and image.
 #    st.write(f'filename: {uploaded_file.name}')
 #    st.image(bytes_data)
 
-    # Upload the image to deta using put with filename and data.
-    drive.put(uploaded_file.name, data=bytes_data)
+        # Upload the image to deta using put with filename and data.
+        drive.put(uploaded_file.name, data=bytes_data)
 
