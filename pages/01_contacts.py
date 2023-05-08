@@ -13,6 +13,9 @@ deta = Deta(deta_key)
 
 db = deta.Base("bgfamily")
 
+st.markdown("<h1 style='text-align: center; color: grey;'>Deta Contacts Database</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: red;'It is was it is.</h2>", unsafe_allow_html=True)
+
 with st.form("form", clear_on_submit=True):
     name = st.text_input("Your name")
     age = st.text_input("Your age")
