@@ -17,16 +17,19 @@ st.markdown("<h1 style='text-align: center; color: grey;'>Deta Contacts Database
 st.markdown("<h2 style='text-align: center; color: red;'>It is was it is.</h2>", unsafe_allow_html=True)
 
 with st.form("form", clear_on_submit=True):
-    name = st.text_input("Your name")
+    result_area.write("")
+    name = st.text_input("Your name")    
     age = st.text_input("Your age")
     notes = st.text_area("Enter the notes for this person")
     submitted = st.form_submit_button("Store in database")
     if submitted:
+        st.results() = ""
         db.put({"name": name, "age": age, "notes": notes})
         hdr.success(name+" Has been added to the database")
 detdat = db.fetch().items
 df = pd.DataFrame(detdat)
-st.dataframe(df.filter(items=['name','age', 'notes', 'basis']).sort_values(by=['name','age']))
+result_area = st.empty()
+result_area.dataframe(df.filter(items=['name','age', 'notes', 'basis']).sort_values(by=['name','age']))
 
 #time.sleep(5)
 #hdr.write("")
