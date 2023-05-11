@@ -1,5 +1,14 @@
 import streamlit as st
-import streamlit_authenticator as stauth
+from st_pages import Page, add_page_title, show_pages
+
+add_page_title("Welcome to my site")
+
+show_pages(
+  [
+    page("pages/contacts.py","Contacts",""),
+    page("pages/photos.py","Photo Library",""),
+  ]
+)
 
 pholder = st.sidebar.empty()
 with pholder.container():
