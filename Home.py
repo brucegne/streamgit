@@ -5,6 +5,9 @@ pholder = st.sidebar.empty()
 with pholder.container():
   uname = st.text_input("Enter User Name")
   upass = st.text_input("Enter Password")
+  login = st.button("Login")
+  if login:
+    pholder.write("")
   
 lcol, rcol = st.columns([3,1])
 
