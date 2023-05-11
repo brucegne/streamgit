@@ -5,8 +5,9 @@ add_page_title("Welcome to my site")
 
 show_pages(
   [
-    Page("pages/contacts.py","Contacts",""),
-    Page("pages/photos.py","Photo Library",""),
+    Page("Home.py","Home","")
+    Page("page/contacts.py","Contacts","🏡"),
+    Page("page/photos.py","Photo Library","📸"),
   ]
 )
 
