@@ -21,6 +21,7 @@ def dispLog():
     if login:
       st.session_state['logStatus'] = 'Yes'
       pholder.write("")
+      bldMenu()
 
 if 'logStatus' not in st.session_state:
   dispLog()
