@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 from deta import Deta
 import time
+from st_pages import Page, add_page_title, show_pages
+
+add_page_title()
 
 # Data to be written to Deta Base
 

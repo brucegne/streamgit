@@ -1,7 +1,7 @@
 import streamlit as st
 from st_pages import Page, add_page_title, show_pages
 
-add_page_title("Welcome to my site")
+add_page_title()
 
 def bldmenu():
   show_pages(

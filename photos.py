@@ -2,6 +2,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 import os, json, time
 from deta import Deta, Drive
+from st_pages import Page, add_page_title, show_pages
+
+add_page_title()
 
 deta_key = "b0fvbhznajp_skZPFvqP1e1dV6eK5BHkuDm72uM6FKf4"
 zips_key = "b0fvbhznajp_xGQ4ave87rKLwaYZ5QcCkCovWFoM5thU"
