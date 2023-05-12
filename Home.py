@@ -7,8 +7,8 @@ def bldmenu():
   show_pages(
     [
       Page("Home.py","Home",""),
-      Page("page/contacts.py","Contacts","🏡"),
-      Page("page/photos.py","Photo Library","📸"),
+      Page("contacts.py","Contacts","🏡"),
+      Page("photos.py","Photo Library","📸"),
     ]
   )
 
