@@ -6,7 +6,7 @@ add_page_title("Welcome to my site")
 def bldmenu():
   show_pages(
     [
-      Page("Home.py","Home",""),
+      Page("Home.py","Home",":gb:"),
       Page("contacts.py","Contacts","🏡"),
       Page("photos.py","Photo Library","📸"),
     ]
