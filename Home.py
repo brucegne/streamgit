@@ -26,7 +26,7 @@ def dispLog():
 if 'logStatus' not in st.session_state:
     dispLog()
 else:
-    bldmenu()   
+    bldMenu()   
 
 lcol, rcol = st.columns([1,1])
 
