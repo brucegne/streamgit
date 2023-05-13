@@ -3,7 +3,7 @@ from st_pages import Page, add_page_title, show_pages
 
 add_page_title()
 
-def bldmenu():
+def bldMenu():
   show_pages(
     [
       Page("Home.py","Home",":us:"),
@@ -13,20 +13,20 @@ def bldmenu():
   )
 
 def dispLog():
-  pholder = st.sidebar.empty()
-  with pholder.container():
-    uname = st.text_input("Enter User Name")
-    upass = st.text_input("Enter Password")
-    login = st.button("Login")
-    if login:
-      st.session_state['logStatus'] = 'Yes'
-      pholder.write("")
-      bldMenu()
+    pholder = st.sidebar.empty()
+    with pholder.container():
+      uname = st.text_input("Enter User Name")
+      upass = st.text_input("Enter Password")
+      login = st.button("Login")
+      if login:
+        st.session_state['logStatus'] = 'Yes'
+        pholder.write("")
+        bldMenu()
 
 if 'logStatus' not in st.session_state:
-  dispLog()
+    dispLog()
 else:
-  bldmenu()   
+    bldmenu()   
 
 lcol, rcol = st.columns([1,1])
 
