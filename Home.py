@@ -28,7 +28,7 @@ if 'logStatus' not in st.session_state:
 else:
   bldmenu()   
 
-lcol, rcol = st.columns([3,1])
+lcol, rcol = st.columns([1,1])
 
 lcol.header("This is on the left")
 rcol.header("This is on right")
