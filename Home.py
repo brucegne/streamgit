@@ -6,7 +6,7 @@ add_page_title()
 def bldMenu():
   show_pages(
     [
-      Page("Home.py","Homely",""),
+      Page("Home.py","Homely",":us:"),
       Page("contacts.py","Contacts","🏡"),
       Page("DetaZips.py","ZipCode Lookup","💩"),
       Page("photos.py","Photo Library","📸"),
