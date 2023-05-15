@@ -8,6 +8,7 @@ def bldMenu():
     [
       Page("Home.py","Homely",""),
       Page("contacts.py","Contacts","🏡"),
+      Page("DetaZips.py","ZipCode Lookup","💩"),
       Page("photos.py","Photo Library","📸"),
     ]
   )
