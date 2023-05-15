@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 from deta import Deta
+from st_pages import Page, add_page_title, show_pages
+
+add_page_title()
 
 st.markdown("<h1 style='text-align: center; color: grey;'>Zipcode Lookup by County</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</h2>", unsafe_allow_html=True)
@@ -9,7 +12,7 @@ st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</
 deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
 db = deta.Base("Zipcode")
 
-add_page_title()
+
 
 hdr = st.container()
 qryString = {}
