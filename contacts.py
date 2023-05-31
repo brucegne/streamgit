@@ -25,7 +25,6 @@ with st.form("form", clear_on_submit=True):
     notes = st.text_area("Enter the notes for this person")
     submitted = st.form_submit_button("Store in database")
     if submitted:
-        result_area.write("")
         db.put({"name": name, "age": age, "notes": notes})
         hdr.success(name+" Has been added to the database")
 detdat = db.fetch().items
