@@ -24,6 +24,8 @@ def dispLog():
         pholder.write("")
         bldMenu()
 
+bldMenu()
+"""
 if 'logStatus' not in st.session_state:
     dispLog()
 else:
@@ -33,3 +35,4 @@ lcol, rcol = st.columns([1,1])
 
 lcol.header("This is on the left")
 rcol.header("This is on right")
+"""
