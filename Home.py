@@ -12,7 +12,7 @@ def bldMenu():
       Page("photos.py","Photo Library","📸"),
     ]
   )
-
+"""
 def dispLog():
     pholder = st.sidebar.empty()
     with pholder.container():
@@ -23,7 +23,7 @@ def dispLog():
         st.session_state['logStatus'] = 'Yes'
         pholder.write("")
         bldMenu()
-
+"""
 bldMenu()
 """
 if 'logStatus' not in st.session_state:
