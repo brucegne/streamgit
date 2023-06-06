@@ -12,27 +12,5 @@ def bldMenu():
       Page("photos.py","Photo Library","📸"),
     ]
   )
-"""
-def dispLog():
-    pholder = st.sidebar.empty()
-    with pholder.container():
-      uname = st.text_input("Enter User Name")
-      upass = st.text_input("Enter Password")
-      login = st.button("Login")
-      if login:
-        st.session_state['logStatus'] = 'Yes'
-        pholder.write("")
-        bldMenu()
-"""
+
 bldMenu()
-"""
-if 'logStatus' not in st.session_state:
-    dispLog()
-else:
-    bldMenu()   
-
-lcol, rcol = st.columns([1,1])
-
-lcol.header("This is on the left")
-rcol.header("This is on right")
-"""
