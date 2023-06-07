@@ -15,7 +15,7 @@ def bldMenu():
 
 bldMenu()
 
-lcol, rcol = st.columns(1,2)
+lcol, rcol = st.columns([1,2])
 
 with lcol:
   st.subheader("Please Login")
