@@ -17,9 +17,10 @@ bldMenu()
 
 lcol, rcol = st.columns(1,2)
 
-lcol.subheader("Please Login")
-lcol.form(lform, clear_on_submit=True)
-usrname=lcol.text_input(max_chars=15, key="uname")
-upasswd=lcol.text_input(max_chars=15, key="upass", type="password")
-logbtn=lcol.form_submit_button("Login", key="lBtn")
+with lcol:
+  st.subheader("Please Login")
+  with st.form(lform, clear_on_submit=True):
+    usrname=st.text_input(max_chars=15, key="uname")
+    upasswd=st.text_input(max_chars=15, key="upass", type="password")
+    logbtn=st.form_submit_button("Login", key="lBtn")
 
