@@ -15,6 +15,8 @@ def bldMenu():
 
 bldMenu()
 
+hdr = st.empty()
+
 lcol, rcol = st.columns([1,2])
 
 with lcol:
@@ -23,4 +25,6 @@ with lcol:
     usrname=st.text_input("User Name", max_chars=15, key="uname")
     upasswd=st.text_input("Password", max_chars=15, key="upass", type="password")
     logbtn=st.form_submit_button("Login", key="lBtn")
-
+    if logbtn:
+      hdr.write("Logged In")
+      
