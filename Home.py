@@ -14,3 +14,12 @@ def bldMenu():
   )
 
 bldMenu()
+
+lcol, rcol = st.columns(1,2)
+
+lcol.subheader("Please Login")
+lcol.form(lform, clear_on_submit=True)
+usrname=lcol.text_input(max_chars=15, key="uname")
+upasswd=lcol.text_input(max_chars=15, key="upass", type="password")
+logbtn=lcol.form_submit_button("Login", key="lBtn")
+
