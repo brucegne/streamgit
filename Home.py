@@ -24,7 +24,7 @@ with lcol:
   with st.form("lform", clear_on_submit=True):
     usrname=st.text_input("User Name", max_chars=15, key="uname")
     upasswd=st.text_input("Password", max_chars=15, key="upass", type="password")
-    logbtn=st.form_submit_button("Login", key="lBtn")
+    logbtn=st.form_submit_button("Login")
     if logbtn:
       hdr.write("Logged In")
       
