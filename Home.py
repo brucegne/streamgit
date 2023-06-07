@@ -17,7 +17,7 @@ bldMenu()
 
 hdr = st.empty()
 
-lcol, rcol = st.columns([1,2])
+lcol, rcol = st.columns([1,1])
 
 with lcol:
   st.subheader("Please Login")
