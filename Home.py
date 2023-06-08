@@ -27,5 +27,5 @@ with lcol:
     upasswd=st.text_input("Password", max_chars=15, key="upass", type="password")
     logbtn=st.form_submit_button("Login")
     if logbtn:
-        switch_page("Contacts")
+        switch_page("DetaZips")
         
