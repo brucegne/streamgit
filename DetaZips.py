@@ -1,10 +1,14 @@
 import streamlit as st
 import pandas as pd
 from deta import Deta
+from streamlit_extras.switch_page_button import switch_page
 from st_pages import Page, add_page_title, show_pages
 
 add_page_title()
 
+if 'logUser' not in st.session_state:
+   switch_page('Home')
+   
 st.markdown("<h1 style='text-align: center; color: grey;'>Zipcode Lookup by County</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</h2>", unsafe_allow_html=True)
 

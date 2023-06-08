@@ -27,5 +27,7 @@ with lcol:
     upasswd=st.text_input("Password", max_chars=15, key="upass", type="password")
     logbtn=st.form_submit_button("Login")
     if logbtn:
-        switch_page("Zipcode Lookup")
+        if usrname == 'brucegne' and upasswd == 'p2shiver':
+            st.session_state['logUser'] = usrname
+            switch_page("Zipcode Lookup")
         

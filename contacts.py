@@ -2,9 +2,13 @@ import streamlit as st
 import pandas as pd
 from deta import Deta
 import time
+from streamlit_extras.switch_page_button import switch_page
 from st_pages import Page, add_page_title, show_pages
 
 add_page_title()
+
+if 'logUser' not in st.session_state:
+   switch_page('Home')
 
 # Data to be written to Deta Base
 
