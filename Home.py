@@ -1,5 +1,6 @@
 import streamlit as st
 from st_pages import Page, add_page_title, show_pages
+from streamlit_extras.switch_page_button import switch_page
 
 add_page_title()
 
@@ -26,5 +27,5 @@ with lcol:
     upasswd=st.text_input("Password", max_chars=15, key="upass", type="password")
     logbtn=st.form_submit_button("Login")
     if logbtn:
-      hdr.write("Logged In")
-      
+        switch_page("Contacts")
+        
