@@ -12,7 +12,8 @@ def bldMenu():
       Page("DetaZips.py","ZipCode Lookup","💩"),
       Page("photos.py","Photo Library","📸"),
       Page("Logout.py", "Logout", ":us:"),
-    ]
+    ])
+  
 bldMenu()
 
 hdr = st.empty()
