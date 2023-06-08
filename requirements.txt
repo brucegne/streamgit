@@ -1,10 +1,9 @@
-pip>23
 numpy
 gspread
 requests
 pandas==1.2.3
 streamlit
-install streamlit-extras
+streamlit-extras
 deta
 streamlit-option-menu
 streamlit-authenticator
