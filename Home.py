@@ -11,7 +11,7 @@ def bldMenu():
       Page("contacts.py","Contacts","🏡"),
       Page("DetaZips.py","ZipCode Lookup","💩"),
       Page("photos.py","Photo Library","📸"),
-      Page("Logout.py", "Logout", ":us:"),
+      Page("Logout.py", "Logout", ":door:"),
     ])
   
 bldMenu()
