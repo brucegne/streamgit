@@ -38,8 +38,6 @@ with lcol:
         db = deta.Base("UserBase")
         qryString["login_name"] = usrname.strip()
         recs = db.fetch(qryString).items
-        logit.write(qryString)
-        logit.write(recs)
         if len(recs) > 0:
             file_pass = recs[0]['passwd']
             if file_pass == upasswd:
