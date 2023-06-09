@@ -8,6 +8,8 @@ add_page_title()
 
 if 'logUser' not in st.session_state:
    switch_page('Home')
+else:
+    st.subheader("Current User " + st.session_state['full_name'])
    
 st.markdown("<h1 style='text-align: center; color: grey;'>Zipcode Lookup by County</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</h2>", unsafe_allow_html=True)
