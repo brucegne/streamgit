@@ -41,6 +41,12 @@ with lcol:
             file_pass = db_content[0]['passwd']
             if file_pass == upasswd:
 #                user_name = usrname
+                hdr.write("Welcome "+ db_content[0]["full_name"])
                 st.session_state['logUser'] = usrname
                 switch_page("Zipcode Lookup")
+            else:
+               hdr.write("Invalid password entered")
+        else:
+           hdr.write("Invalid user name or password")
+           
         
