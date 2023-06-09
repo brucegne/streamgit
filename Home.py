@@ -5,7 +5,7 @@ from streamlit_extras.switch_page_button import switch_page
 
 add_page_title()
 
-user_name = st.sidebar.empty()
+# user_name = st.sidebar.empty()
 
 def bldMenu():
   show_pages(
