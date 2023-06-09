@@ -43,7 +43,7 @@ else:
             if len(recs) > 0:
                 file_pass = recs[0]['passwd']
                 if file_pass == upasswd:
-                    logit.write("Welcome " + recs[0]["full_name"])
+#                    logit.write("Welcome " + recs[0]["full_name"])
                     st.session_state['logUser'] = usrname
                     st.session_state['full_name'] = recs[0]['full_name']
                     switch_page("Zipcode Lookup")
