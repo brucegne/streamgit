@@ -16,13 +16,11 @@ st.markdown("<h2 style='text-align: center; color: red;'>Online for IA, NE, KS</
 deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
 db = deta.Base("Zipcode")
 
-
-
 hdr = st.container()
 qryString = {}
 county = st.text_input("Enter partial county name and press enter.")
 if county:
-  with st.spinner("Searching..."):    
+  with st.spinner("Searching..."): 
     qryString["county?contains"] = county.title()
     db_content = db.fetch(qryString).items
     try:

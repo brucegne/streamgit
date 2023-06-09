@@ -13,6 +13,7 @@ if 'logUser' not in st.session_state:
 # Data to be written to Deta Base
 
 hdr = st.empty()
+
 deta_key = "b0fvbhznajp_skZPFvqP1e1dV6eK5BHkuDm72uM6FKf4"
 zips_key = "b0fvbhznajp_xGQ4ave87rKLwaYZ5QcCkCovWFoM5thU"
 
