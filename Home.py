@@ -34,11 +34,10 @@ with lcol:
     logbtn=st.form_submit_button("Login")
     if logbtn:
         qryString = {}
-        deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
+        deta = Deta("b0fvbhznajp_skZPFvqP1e1dV6eK5BHkuDm72uM6FKf4")
         db = deta.Base("UserBase")
         qryString["login_name"] = usrname.strip()
         recs = db.fetch(qryString).items
-        logit.write(db)
         logit.write(qryString)
         logit.write(recs)
         if len(recs) > 0:
