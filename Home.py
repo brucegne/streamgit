@@ -32,12 +32,13 @@ with lcol:
     usrname=st.text_input("User Name", max_chars=20, key="uname")
     upasswd=st.text_input("Password", max_chars=20, key="upass", type="password")
     logbtn=st.form_submit_button("Login")
-    qryString = {}
     if logbtn:
+        qryString = {}
         deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
         db = deta.Base("UserBase")
         qryString["login_name"] = usrname.strip()
         recs = db.fetch(qryString).items
+        logit.write(db)
         logit.write(qryString)
         logit.write(recs)
         if len(recs) > 0:
