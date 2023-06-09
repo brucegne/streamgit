@@ -38,7 +38,7 @@ with lcol:
         qryString["login_name"] = usrname
         db_content = db.fetch(qryString).items
         if len(db_content) > 0:
-            file_pass = db_object[0]['passwd']
+            file_pass = db_content[0]['passwd']
             if file_pass == upasswd:
 #                user_name = usrname
                 st.session_state['logUser'] = usrname
