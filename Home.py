@@ -37,13 +37,13 @@ with lcol:
         deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
         db = deta.Base("UserBase")
         qryString["login_name"] = usrname.strip()
-        db_content = db.fetch(qryString).items
+        recs = db.fetch(qryString).items
         logit.write(qryString)
         logit.write(db_content)
-        if len(db_content) > 0:
-            file_pass = db_content[0]['passwd']
+        if len(recs) > 0:
+            file_pass = recs[0]['passwd']
             if file_pass == upasswd:
-                hdr.write("Welcome " + db_content[0]["full_name"])
+                hdr.write("Welcome " + recs[0]["full_name"])
                 st.session_state['logUser'] = usrname
                 switch_page("Zipcode Lookup")
             else:
