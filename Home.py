@@ -20,6 +20,7 @@ def bldMenu():
 bldMenu()
 
 hdr = st.empty()
+logit = st.container()
 
 # Connect to Deta Base with your Data Key
 deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
@@ -37,16 +38,17 @@ with lcol:
     if logbtn:
         qryString["login_name"] = usrname
         db_content = db.fetch(qryString).items
+        logit.write(qryString)
+        login.write(db_content)
         if len(db_content) > 0:
             file_pass = db_content[0]['passwd']
             if file_pass == upasswd:
-#                user_name = usrname
-                hdr.write("Welcome "+ db_content[0]["full_name"])
+                hdr.write("Welcome " + db_content[0]["full_name"])
                 st.session_state['logUser'] = usrname
                 switch_page("Zipcode Lookup")
             else:
                hdr.write("Invalid password entered")
         else:
            hdr.write("Invalid user name or password")
-           
+
         
