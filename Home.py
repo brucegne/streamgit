@@ -36,7 +36,7 @@ with lcol:
     if logbtn:
         deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
         db = deta.Base("UserBase")
-        qryString["login_name"] = usrname
+        qryString["login_name"] = usrname.strip()
         db_content = db.fetch(qryString).items
         logit.write(qryString)
         logit.write(db_content)
