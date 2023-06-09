@@ -20,7 +20,7 @@ def bldMenu():
 bldMenu()
 
 hdr = st.empty()
-logit = st.container()
+logit = st.sidebar.empty()
 
 # Connect to Deta Base with your Data Key
 
@@ -43,7 +43,7 @@ with lcol:
         if len(recs) > 0:
             file_pass = recs[0]['passwd']
             if file_pass == upasswd:
-                hdr.write("Welcome " + recs[0]["full_name"])
+                logit.write("Welcome " + recs[0]["full_name"])
                 st.session_state['logUser'] = usrname
                 switch_page("Zipcode Lookup")
             else:
