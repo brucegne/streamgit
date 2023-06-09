@@ -23,8 +23,6 @@ hdr = st.empty()
 logit = st.container()
 
 # Connect to Deta Base with your Data Key
-deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
-db = deta.Base("UserBase")
 
 lcol, rcol = st.columns([1,1])
 
@@ -36,6 +34,8 @@ with lcol:
     logbtn=st.form_submit_button("Login")
     qryString = {}
     if logbtn:
+        deta = Deta("b0fhjqxu_fG4y33DEMaK8qWfMGABUSbn8cGFNxXhC")
+        db = deta.Base("UserBase")
         qryString["login_name"] = usrname
         db_content = db.fetch(qryString).items
         logit.write(qryString)
