@@ -9,10 +9,9 @@ add_page_title()
 
 
 if 'logUser' not in st.session_state:
-   switch_page('Home')
+    switch_page('Home')
 else:
     st.subheader("Current User " + st.session_state['full_name'])
-# Data to be written to Deta Base
 
 hdr = st.empty()
 
