@@ -39,7 +39,7 @@ with lcol:
         qryString["login_name"] = usrname
         db_content = db.fetch(qryString).items
         logit.write(qryString)
-        login.write(db_content)
+        logit.write(db_content)
         if len(db_content) > 0:
             file_pass = db_content[0]['passwd']
             if file_pass == upasswd:
