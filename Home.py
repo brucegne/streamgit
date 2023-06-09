@@ -40,7 +40,7 @@ with lcol:
         if len(db_content) > 0:
             file_pass = db_object[0]['passwd']
             if file_pass == upasswd:
-                user_name = usrname
+#                user_name = usrname
                 st.session_state['logUser'] = usrname
                 switch_page("Zipcode Lookup")
         
